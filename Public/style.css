@@ -23,6 +23,9 @@ font-family: 'Roboto', sans-serif; */
     --Roboto:'Roboto', sans-serif;
     --primary-button:blue;
     --button-hover:blue;
+    --btn-Background:#aec5e9;
+    --avatar-back:#ddd;
+    --Sidehover:rgb(56, 112, 119);
 }
 
 html {
@@ -33,12 +36,24 @@ body {
     font-family:var(--font-body);
     background-color: var(--pure-white);
 }
-/* ##################### --- utility classes and styling --- ######################  */
+/* ##################### --- utility classes and styling --- ###################################################*/
+
+.lg-heading{
+    font-size: 3.5rem;
+    font-family: var(--Roboto);
+    margin-bottom: 0.5em;
+    font-weight: 400;
+}
+.mg-heading{
+    font-size: 2.5rem;
+    font-family: var(--Roboto);
+    font-weight: 300;
+    margin-bottom: 0.5em;
+}
 
 
 
-
-/* ##################### --- basic fonts and styling --- ######################  */
+/* ##################### --- basic fonts and styling --####################################################  */
 h1 {
     font-size: 3.2rem;
     font-weight: 600;
@@ -79,12 +94,11 @@ a,li{
 
 button{
     font-family:var(--Poppins);
-    width: 100px;
-    height: 30px;
+    width: 10rem;
+    height: 3rem;
     font-size: 1.6rem;
     border: none;
     display: block;
-    background: var(--header-back);
     border: 2px solid var(--primary-button);
     letter-spacing: 0.15rem;
     color:black;
@@ -95,17 +109,21 @@ button:focus{
     border: 2px solid var(--primary-button);
     outline: none;
     cursor: pointer;
+
 }
 
-/* ##################---grid ares of css ------- ####################  */
+/* ##################---grid ares of css ------- ############################################################ */
 .header {
     grid-area: header;
-    border: 2px solid red;
+}
+
+.graphics{
+    grid-area: graphics;
+
 }
 
 .sidebar {
     grid-area: sidebar;
-    border: 2px solid #000000;
 }
 
 .content {
@@ -118,13 +136,20 @@ button:focus{
     border: 2px ridge orange;
 }
 
-body {
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 2em auto;
+}
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 25rem 1fr;
-    grid-template-areas: "header header" "sidebar content" "footer footer";
+    grid-template-areas: "header header" "graphics graphics" "sidebar content" "footer footer";
 }
 
-/*############-------- header styling is written here -------###########*/
+/*############-------- header styling is written here -------################################################*/
 
 
 .header-content{
@@ -136,6 +161,7 @@ body {
     position: relative;
     background-position: right;
     background-origin: content-box;
+    /* filter: blur(2px); */
 }
 
 .txt{
@@ -146,15 +172,19 @@ body {
     left: 3%;
     transform: translate(-3%,-50%);
     color: #333;
+    /* filter: blur(0px); */
 }
 
 .txt>button{
     width: 9.5rem;
+    background:var(--btn-Background);
+    padding: 3px;
     border: none;
+    padding-top: 0.4rem;
+    border-radius: 3px;
     margin-top: 2rem;
     position: relative;
 }
-
 .txt button::after{
     content: "";
     width: 0%;
@@ -164,15 +194,15 @@ body {
     background: var(--primary-button);
     transition:width 0.3s ease-in-out;
     position: absolute;
-    top: -10%;
+    top: -15%;
     left: 0%;
 }
 .txt button::before{
     content: "";
     width: 0%;
-    height:2px;
+    height:3px;
     margin: 0 auto;
-    background-origin: right;
+    /* background-origin: right; */
     display: block;
     background: var(--primary-button);
     transition:width 0.3s ease-in-out;
@@ -180,7 +210,10 @@ body {
     bottom: -10%;
     right: -10%;
 }
+.txt button:hover{
+    background: none;
 
+}
 .txt button:hover::after{
     background: var(--primary-button);
     width: 110%;
@@ -196,7 +229,7 @@ body {
     width: 0;
     height: 0;
     border: solid 10px;
-    border-color: transparent transparent transparent var(--primary-button) ;
+    border-color: transparent transparent transparent var(--btn-Background) ; 
     position: absolute;
     top: 10%;
     right: -30%;
@@ -205,22 +238,169 @@ body {
 .txt button:hover div{
     transform: translatex(-10px) rotate(1260deg);
 }
+.txt button:hover div{
+    border-color: transparent transparent transparent  var(--primary-button) ;
+}
 
-/* ###################---styling sidebar -----#################3  */
+/* ###################---Graphics Styling -----######################################################### */
 
-/* .sidebar{
-    margin-top: 20rem;
+.img-graph{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+
+}
+
+.img-graph img{
+    width: 45px;
+    display: inline-block;
+    height: auto;
+    margin-top: 4rem;
+}
+
+.graph{
+    width: 200px;
+    display: inline-block;
+    margin: 3em;
+    height: auto;
+}
+
+.graph a{
+    font-family: var(--Roboto);
+    color: #000;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1em;
+}
+
+/* ###################---styling sidebar -----##############################################################*/
+
+.sidebar{
+    margin-top:26.88rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items:center;
     flex-wrap: wrap;
     position: sticky;
-    top: 10%;
+    top: 50%;
+    transform: translate(0%,-50%);
     width: 200px;
-    height: 400px;
+    height: 535px;
+    margin-bottom: -18rem;
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 10%), 0px 0px 6px 1px rgb(0 0 0 / 20%);
+    background:#000000;
+    /* background:#2f323a; */
+
+}
+.navbar ul li{
+    text-align: center;
+    
+}
+.nav-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.nav-items a:hover{
+    transition: all 0.4s ease-in-out;
+
+}
+.navbar{
+    margin-top: 15px;
+    
+}
+.item>a{
+    width: 19.3rem;
+    padding: 3px 0;
+    text-align:center;
+    color: #fdfdfd;
+    font-family: var(--Poppins);
+    font-weight: 400;
+}
+.item>a:hover{
+    text-align: center;
+    /* background-color: var(--avatar-back); */
+}
+
+.item{
+    position: relative;
+}
+.item::after{
+    content: "";
+    width: 0%;
+    height: 33px;
+    background: rgb(29, 193, 214);
+    display: inline-block;
+    position: absolute;
+    bottom: 19%;
+    right:50% ;
+    transition: width 0.4s ease-in-out;
+    border-radius: 3px 0px 0px 3px;
+    z-index: -22;
+}
+.item::before{
+    content: "";
+    width: 0%;
+    height: 33px;
+    background: rgb(29, 193, 214);
+    display: inline-block;
+    position: absolute;
+    bottom: 19%;
+    left:50% ;
+    border-radius: 0px 3px 3px 0px;
+    transition: width 0.4s ease-in-out;
+    z-index: -21;
+
+}
+.item:hover::before{
+    width: 50%;
+
+}
+
+.item:hover::after{
+    width: 50%;
+
+}
+.navbar{
+    position: relative;
+}
+
+/* .navbar::after{
+    content: "";
+    width: 10%;
+    height: 100%;
+    border: 2px solid red;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    transition: width 0.4s ease-in-out;
+    z-index: -1;
 
 } */
 
+/*###################################--- content styling is written here -------###########################*/
+.content{
+    border-top: 1px solid #aaa;
+}
 
 
+.avatar-img img{
+    width: 120px;
+    height: 120px;
+}
+.avatar-img{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: teal;
+}
