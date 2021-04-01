@@ -25,7 +25,7 @@ font-family: 'Roboto', sans-serif; */
     --button-hover:blue;
     --btn-Background:#aec5e9;
     --avatar-back:#ddd;
-    --Sidehover:rgb(56, 112, 119);
+    --Sidehover:rgb(29, 193, 214);
 }
 
 html {
@@ -292,8 +292,7 @@ button:focus{
     height: 535px;
     margin-bottom: -18rem;
     box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 10%), 0px 0px 6px 1px rgb(0 0 0 / 20%);
-    background:#000000;
-    /* background:#2f323a; */
+    background:#2f323a;
 
 }
 .navbar ul li{
@@ -308,6 +307,7 @@ button:focus{
     flex-wrap: wrap;
 }
 .nav-items a:hover{
+    background: rgb(29, 193, 214);
     transition: all 0.4s ease-in-out;
 
 }
@@ -322,6 +322,7 @@ button:focus{
     color: #fdfdfd;
     font-family: var(--Poppins);
     font-weight: 400;
+    border-bottom: 3px solid white;
 }
 .item>a:hover{
     text-align: center;
@@ -334,29 +335,24 @@ button:focus{
 .item::after{
     content: "";
     width: 0%;
-    height: 33px;
-    background: rgb(29, 193, 214);
+    height: 4px;
+    background:rgb(38, 114, 133);
     display: inline-block;
     position: absolute;
     bottom: 19%;
     right:50% ;
     transition: width 0.4s ease-in-out;
-    border-radius: 3px 0px 0px 3px;
-    z-index: -22;
 }
 .item::before{
     content: "";
     width: 0%;
-    height: 33px;
-    background: rgb(29, 193, 214);
+    height: 4px;
+    background:rgb(38, 114, 133);
     display: inline-block;
     position: absolute;
     bottom: 19%;
     left:50% ;
-    border-radius: 0px 3px 3px 0px;
     transition: width 0.4s ease-in-out;
-    z-index: -21;
-
 }
 .item:hover::before{
     width: 50%;
