@@ -371,19 +371,24 @@ button:focus{
     position: relative;
 }
 
-/* .navbar::after{
+.sidebar::after{
     content: "";
-    width: 10%;
+    width: 5%;
     height: 100%;
-    border: 2px solid red;
     display: inline-block;
     position: absolute;
     top: 0;
-    left: 25%;
+    right: -5%;
     transition: width 0.4s ease-in-out;
+    background: linear-gradient(to bottom,blue,blue,cyan,yellow,red,red);
+    border-radius: 0px 12px 12px 0px;
     z-index: -1;
+    box-shadow: 3px 1px 4px  1px #aaa;
 
-} */
+}
+.sidebar{
+    box-shadow: 3px 1px 4px  1px #aaa;
+}
 
 /*###################################--- content styling is written here -------###########################*/
 .content{
