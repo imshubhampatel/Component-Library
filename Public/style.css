@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,300&family=Roboto:wght@300;500;700;900&display=swap');
-
-*,
-*::after,
-*::before{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* 
@@ -15,17 +12,17 @@ font-family: 'Roboto', sans-serif; */
 
 :root {
     --primary-color: #fdfdfd;
-    --pure-white:#fff;
-    --header-back:#d2e1f8;
-    --font-body:'Montserrat', sans-serif;
+    --pure-white: #fff;
+    --header-back: #d2e1f8;
+    --font-body: 'Montserrat', sans-serif;
     --montserrat: 'Montserrat', sans-serif;
-    --Poppins:'Poppins', sans-serif;
-    --Roboto:'Roboto', sans-serif;
-    --primary-button:blue;
-    --button-hover:blue;
-    --btn-Background:#aec5e9;
-    --avatar-back:#ddd;
-    --Sidehover:rgb(56, 112, 119);
+    --Poppins: 'Poppins', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+    --primary-button: blue;
+    --button-hover: blue;
+    --btn-Background: #aec5e9;
+    --avatar-back: #ddd;
+    --Sidehover: rgb(56, 112, 119);
 }
 
 html {
@@ -33,27 +30,35 @@ html {
 }
 
 body {
-    font-family:var(--font-body);
+    font-family: var(--font-body);
     background-color: var(--pure-white);
 }
+
 /* ##################### --- utility classes and styling --- ###################################################*/
 
-.lg-heading{
+.lg-heading {
     font-size: 3.5rem;
-    font-family: var(--Roboto);
+    font-family: var(--Poppins);
     margin-bottom: 0.5em;
     font-weight: 400;
 }
-.mg-heading{
+
+.card-heading {
+    width: 100%;
+    margin: 0 auto;
+    font-family: var(--Poppins);
+    background: rgb(63, 62, 68);
+}
+
+.mg-heading {
     font-size: 2.5rem;
     font-family: var(--Roboto);
     font-weight: 300;
     margin-bottom: 0.5em;
 }
 
-
-
 /* ##################### --- basic fonts and styling --####################################################  */
+
 h1 {
     font-size: 3.2rem;
     font-weight: 600;
@@ -80,20 +85,18 @@ li, a, p {
     letter-spacing: 0.15rem;
     text-align: justify;
     display: block;
-
 }
-a,li{
+
+a, li {
     text-decoration: none;
     color: #000;
     display: block;
     list-style: none;
     text-transform: capitalize;
-
 }
 
-
-button{
-    font-family:var(--Poppins);
+button {
+    font-family: var(--Poppins);
     width: 10rem;
     height: 3rem;
     font-size: 1.6rem;
@@ -101,25 +104,24 @@ button{
     display: block;
     border: 2px solid var(--primary-button);
     letter-spacing: 0.15rem;
-    color:black;
+    color: black;
     border-radius: 10px;
 }
 
-button:focus{
+button:focus {
     border: 2px solid var(--primary-button);
     outline: none;
     cursor: pointer;
-
 }
 
 /* ##################---grid ares of css ------- ############################################################ */
+
 .header {
     grid-area: header;
 }
 
-.graphics{
+.graphics {
     grid-area: graphics;
-
 }
 
 .sidebar {
@@ -128,7 +130,6 @@ button:focus{
 
 .content {
     grid-area: content;
-    border: 2px dotted blue;
 }
 
 .footer {
@@ -136,12 +137,13 @@ button:focus{
     border: 2px ridge orange;
 }
 
-.container{
+.container {
     max-width: 1200px;
     width: 90%;
     margin: 2em auto;
 }
-.wrapper{
+
+.wrapper {
     width: 100%;
     margin: 0 auto;
     display: grid;
@@ -151,8 +153,7 @@ button:focus{
 
 /*############-------- header styling is written here -------################################################*/
 
-
-.header-content{
+.header-content {
     width: 100%;
     height: 100vh;
     background: var(--header-back) url("../Images/Header-images.svg");
@@ -164,20 +165,20 @@ button:focus{
     /* filter: blur(2px); */
 }
 
-.txt{
+.txt {
     max-width: 40rem;
     height: auto;
     position: absolute;
     top: 50%;
     left: 3%;
-    transform: translate(-3%,-50%);
+    transform: translate(-3%, -50%);
     color: #333;
     /* filter: blur(0px); */
 }
 
-.txt>button{
+.txt>button {
     width: 9.5rem;
-    background:var(--btn-Background);
+    background: var(--btn-Background);
     padding: 3px;
     border: none;
     padding-top: 0.4rem;
@@ -185,41 +186,45 @@ button:focus{
     margin-top: 2rem;
     position: relative;
 }
-.txt button::after{
+
+.txt button::after {
     content: "";
     width: 0%;
-    height:3px;
+    height: 3px;
     margin: 0 auto;
     display: block;
     background: var(--primary-button);
-    transition:width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
     position: absolute;
     top: -15%;
     left: 0%;
 }
-.txt button::before{
+
+.txt button::before {
     content: "";
     width: 0%;
-    height:3px;
+    height: 3px;
     margin: 0 auto;
     /* background-origin: right; */
     display: block;
     background: var(--primary-button);
-    transition:width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
     position: absolute;
     bottom: -10%;
     right: -10%;
 }
-.txt button:hover{
-    background: none;
 
+.txt button:hover {
+    background: none;
 }
-.txt button:hover::after{
+
+.txt button:hover::after {
     background: var(--primary-button);
     width: 110%;
     margin: 0 auto;
 }
-.txt button:hover::before{
+
+.txt button:hover::before {
     background: var(--primary-button);
     width: 110%;
     margin: 0 auto;
@@ -229,44 +234,45 @@ button:focus{
     width: 0;
     height: 0;
     border: solid 10px;
-    border-color: transparent transparent transparent var(--btn-Background) ; 
+    border-color: transparent transparent transparent var(--btn-Background);
     position: absolute;
     top: 10%;
     right: -30%;
     transition: transform 0.1s ease-in-out;
 }
-.txt button:hover div{
+
+.txt button:hover div {
     transform: translatex(-10px) rotate(1260deg);
 }
-.txt button:hover div{
-    border-color: transparent transparent transparent  var(--primary-button) ;
+
+.txt button:hover div {
+    border-color: transparent transparent transparent var(--primary-button);
 }
 
 /* ###################---Graphics Styling -----######################################################### */
 
-.img-graph{
+.img-graph {
     display: flex;
     flex-direction: row;
     text-align: center;
     justify-content: space-around;
-
 }
 
-.img-graph img{
+.img-graph img {
     width: 45px;
     display: inline-block;
     height: auto;
     margin-top: 4rem;
 }
 
-.graph{
+.graph {
     width: 200px;
     display: inline-block;
     margin: 3em;
     height: auto;
 }
 
-.graph a{
+.graph a {
     font-family: var(--Roboto);
     color: #000;
     letter-spacing: 1px;
@@ -278,100 +284,107 @@ button:focus{
 
 /* ###################---styling sidebar -----##############################################################*/
 
-.sidebar{
-    margin-top:26.88rem;
+.sidebar {
+    margin-top: 26.88rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items:center;
+    align-items: center;
     flex-wrap: wrap;
     position: sticky;
     top: 50%;
-    transform: translate(0%,-50%);
+    transform: translate(0%, -50%);
     width: 200px;
     height: 535px;
     margin-bottom: -18rem;
     box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 10%), 0px 0px 6px 1px rgb(0 0 0 / 20%);
-    background:#000000;
-    /* background:#2f323a; */
+    background: #2f323a;
+}
 
-}
-.navbar ul li{
+.navbar ul li {
     text-align: center;
-    
 }
-.nav-items{
+
+.nav-items {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
-.nav-items a:hover{
-    transition: all 0.4s ease-in-out;
 
+.nav-items a:hover {
+    transition: all 0.4s ease-in-out;
 }
-.navbar{
+
+.navbar {
     margin-top: 15px;
-    
 }
-.item>a{
+
+.item>a {
     width: 19.3rem;
     padding: 3px 0;
-    text-align:center;
+    text-align: center;
     color: #fdfdfd;
     font-family: var(--Poppins);
     font-weight: 400;
 }
-.item>a:hover{
+
+.item>a:hover {
     text-align: center;
+    color: black;
     /* background-color: var(--avatar-back); */
 }
 
-.item{
+.item:hover {
+    color: #000;
+}
+
+.item {
     position: relative;
 }
-.item::after{
+
+.item::after {
     content: "";
     width: 0%;
-    height: 33px;
+    height: 30px;
     background: rgb(29, 193, 214);
     display: inline-block;
     position: absolute;
     bottom: 19%;
-    right:50% ;
+    right: 50%;
     transition: width 0.4s ease-in-out;
     border-radius: 3px 0px 0px 3px;
     z-index: -22;
 }
-.item::before{
+
+.item::before {
     content: "";
     width: 0%;
-    height: 33px;
+    height: 30px;
     background: rgb(29, 193, 214);
     display: inline-block;
     position: absolute;
     bottom: 19%;
-    left:50% ;
+    left: 50%;
     border-radius: 0px 3px 3px 0px;
     transition: width 0.4s ease-in-out;
     z-index: -21;
-
 }
-.item:hover::before{
+
+.item:hover::before {
     width: 50%;
-
 }
 
-.item:hover::after{
+.item:hover::after {
     width: 50%;
-
 }
-.navbar{
+
+.navbar {
     position: relative;
 }
 
-.sidebar::after{
+.sidebar::after {
     content: "";
     width: 5%;
     height: 100%;
@@ -380,32 +393,121 @@ button:focus{
     top: 0;
     right: -5%;
     transition: width 0.4s ease-in-out;
-    background: linear-gradient(to bottom,blue,blue,cyan,yellow,red,red);
+    background: linear-gradient(to bottom, blue, blue, cyan, yellow, red, red);
     border-radius: 0px 12px 12px 0px;
     z-index: -1;
-    box-shadow: 3px 1px 4px  1px #aaa;
-
+    box-shadow: 3px 1px 4px 1px #aaa;
 }
-.sidebar{
-    box-shadow: 3px 1px 4px  1px #aaa;
+
+/* #32374c image color
+#a2c7ec light blue color
+#333de9 dark blue color
+#41b0de moon color
+#7c97b8 slettty color
+ */
+
+/* another color 
+ #06acea lisght blue
+ #1f2c3c light black
+ blue #1f2c3c */
+
+.sidebar {
+    box-shadow: 3px 1px 4px 1px #aaa;
 }
 
 /*###################################--- content styling is written here -------###########################*/
+
 .content{
-    border-top: 1px solid #aaa;
+    /* border-top: 1px solid #aaa; */
+    background: #f9f9f9 ;
 }
 
+.c-card{
+    background:#fff;
+    width: 96%;
+    padding:20px;
+    margin: 20px auto;
+}
 
-.avatar-img img{
+/*###################################--- Avatar styling -------###########################*/
+.avatar-img img {
     width: 120px;
     height: 120px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid #aaa;
 }
-.avatar-img{
+
+.avatar-img {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background: teal;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 12px 4px;
 }
+#avatar{
+    background: #fff;
+    margin: 20px;
+    padding:0 20px 30px 20px;
+}
+
+
+/*###################################--- Alert styling -------###########################*/
+
+#alert div{
+    width: 100%;
+    margin: 7px 0px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.alert div{
+    padding: 10px 0;
+    font-size: 1.8rem;
+    font-family: var(--Roboto);
+}
+#alert span{
+    text-align: center;
+}
+
+/*###################################--- Badges styling -------###########################*/
+
+.badges div img{
+    width: 70px;
+    height: 70px;
+    padding: 6px;
+    display: inline-block;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+}
+
+.badges h3{
+    text-align: center;
+    margin: 20px 10px;
+    font-weight: 600;
+}
+.avatar-img-bg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10rem;
+}
+
+.img-av-bg{
+    position: relative;
+}
+
+.circle-bg{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 1%;
+}
+
+
