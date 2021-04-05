@@ -57,6 +57,22 @@ body {
     margin-bottom: 0.5em;
 }
 
+.snippet{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+
+.html{
+    width: 100%;
+}
+html embed{
+    width: 35vw;
+    height: 400px;
+    padding: 1rem 0rem 0rem 0rem;
+    margin: 0 auto;
+    scroll-behavior: none;
+}
 /* ##################### --- basic fonts and styling --####################################################  */
 
 h1 {
@@ -172,7 +188,8 @@ button:focus {
     top: 50%;
     left: 3%;
     transform: translate(-3%, -50%);
-    color: #333;
+    color: #000;
+    font-weight: 500;
     /* filter: blur(0px); */
 }
 
@@ -185,6 +202,25 @@ button:focus {
     border-radius: 3px;
     margin-top: 2rem;
     position: relative;
+}
+.txt>h1{
+    font-size: 3.4rem;
+    font-weight:600;
+    letter-spacing: 0.15rem;
+    font-family:var(--Roboto);
+
+}
+.txt p{
+    font-family:var(--Roboto);
+    font-weight: 300;
+}
+.txt button{
+    font-family: var(--Roboto);
+    font-weight: 300;
+    padding-left: 8px;
+}
+.txt>h1::first-letter{
+    font-size: 3.5rem;
 }
 
 .txt button::after {
@@ -419,7 +455,8 @@ button:focus {
 
 .content{
     /* border-top: 1px solid #aaa; */
-    background: #f9f9f9 ;
+    /* background: #f9f9f9; */
+    background: #f5f5f7;
 }
 
 .c-card{
@@ -476,6 +513,7 @@ button:focus {
 
 /*###################################--- Badges styling -------###########################*/
 
+
 .badges div img{
     width: 70px;
     height: 70px;
@@ -483,22 +521,43 @@ button:focus {
     display: inline-block;
     border: 1px solid #aaa;
     border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.badges h1{
+    font-weight: 600;
 }
 
 .badges h3{
-    text-align: center;
-    margin: 20px 10px;
-    font-weight: 600;
+    text-align: left;
+    margin: 3rem 0px 1rem 0px;
+    font-weight: 500;
+    padding-left: 10px;
 }
 .avatar-img-bg{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 10rem;
+    padding: 1rem 10rem;
+}
+.icon-img-bg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 5rem;
 }
 
 .img-av-bg{
     position: relative;
+}
+.img-av-bg button{
+    width: 20px;
+    height: 20px;
+    padding: 2px 2px 2px 4px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
 }
 
 .circle-bg{
@@ -509,5 +568,20 @@ button:focus {
     top: 50%;
     right: 1%;
 }
+.bg-circle{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    right: -10%;
+    background: rgb(248, 106, 88);
+}
+
+
+
+
+
+
 
 
