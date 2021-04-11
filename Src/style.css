@@ -823,3 +823,20 @@ button i{
     font-family: var(--Roboto);
     margin-top: 2rem;
 }
+
+
+/* images  */
+
+.pics-of-img{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: -10px;
+}
+.img-pics div img{
+    width: 360px;
+    height: auto;
+    margin: 10px;
+    
+}

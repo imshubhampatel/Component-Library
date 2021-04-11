@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="./Src/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Component library</title>
 </head>
 
@@ -55,8 +57,8 @@
                     <li class="item"><a href="#alerts">Alerts</a></li>
                     <li class="item"><a href="#badges">Badges</a></li>
                     <li class="item"><a href="#button">Buttons</a></li>
-                    <li class="item"><a href="#cardd">Cards</a></li>
-                    <li class="item"><a href="#grid-layouts">Grid layouts</a></li>
+                    <li class="item"><a href="#card">Cards</a></li>
+                    <li class="item"><a href="#cart">Cart</a></li>
                     <li class="item"><a href="#images">images</a></li>
                     <li class="item"><a href="#input">inputs</a></li>
                     <li class="item"><a href="#list">list</a></li>
@@ -90,7 +92,7 @@
                     <embed src="https://carbon.now.sh/embed/gNBq9qd3tGdsUQFvYRr8" type="">
                 </div>
             </div>
-            <div class="alert c-card" id="alert">
+            <div class="alert c-card" id="alerts">
                 <h1 class="lg-heading">Alert</h1>
                 <div style="background: #f08080;" class="error"><span>Error</span></div>
                 <div style="background: #ff3;" class="warning"><span>Warning</span></div>
@@ -190,7 +192,7 @@
                     <embed src="https://carbon.now.sh/embed/ysH3a6Qdu4u5QfgFPdXI" type="text/css">
                 </div>
             </div>
-            <div class=" c-card pro-card">
+            <div class=" c-card pro-card" id="card">
                 <div style="margin-top: 10px; " class="cart-opt ">
                     <div style=" padding:20px;background-color: #fff; " class="cart-option ">
                         <div class="cart-opt-img ">
@@ -249,7 +251,7 @@
                     </div>
                 </div>
             </div>
-            <div class="cards c-card">
+            <div class="cards c-card" id="cart">
                 <div class="cart-item">
                     <div class="cart-up">
                         <h3>My Cart(1)</h3>
@@ -337,12 +339,41 @@
                     <embed src="https://carbon.now.sh/embed/vUhqXoTVGynCylosUpq8" type="text/css">
                 </div>
             </div>
+            <div class=" c-card img-pics" id="images">
+                <div>
+                    <h1>Images</h1>
+                </div>
+                <div class="pics-of-img">
+                    <img src="https://wallpapercave.com/wp/wp7762516.jpg" alt="">
+                    <img src="https://wallpapercave.com/wp/wp7762544.jpg" alt="">
+                    <img src="https://wallpapercave.com/wp/wp3188329.jpg" alt="">
+                    <img src="https://wallpapercave.com/wp/wp7762516.jpg" alt="">
+                </div>
+            </div>
+            <div class="c-card snippet animate-left">
+                <div class="html">
+                    <embed src="https://carbon.now.sh/embed/WfwwDJGfgRHolSFliv9r" type="text/html">
+                </div>
+                <div class="css">
+                    <embed src="https://carbon.now.sh/embed/vUhqXoTVGynCylosUpq8" type="text/css">
+                </div>
+            </div>
         </section>
 
         <footer class="footer">
             <h2>footer</h2>
         </footer>
     </main>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
+    <script src="./Src/app.js"></script>
+    <script>
+        AOS.init({
+            offset:300,
+            duration:1500
+        });
+    </script>
 </body>
 
 </html>
