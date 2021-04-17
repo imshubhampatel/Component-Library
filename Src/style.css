@@ -57,21 +57,22 @@ body {
     margin-bottom: 0.5em;
 }
 
-.snippet{
+.snippet {
     display: flex;
     margin: 0 auto;
     flex-direction: row;
     justify-content: space-between;
-
 }
 
-.html{
+.html {
     width: 100%;
 }
-html embed{
+
+html embed {
     width: 34vw;
     height: 250px;
 }
+
 /* ##################### --- basic fonts and styling --####################################################  */
 
 h1 {
@@ -120,7 +121,6 @@ button {
     border: 2px solid var(--primary-button);
     letter-spacing: 0.15rem;
     color: black;
-    border-radius: 10px;
 }
 
 button:focus {
@@ -202,23 +202,26 @@ button:focus {
     margin-top: 2rem;
     position: relative;
 }
-.txt>h1{
-    font-size: 3.4rem;
-    font-weight:600;
-    letter-spacing: 0.15rem;
-    font-family:var(--Roboto);
 
+.txt>h1 {
+    font-size: 3.4rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    font-family: var(--Roboto);
 }
-.txt p{
-    font-family:var(--Roboto);
+
+.txt p {
+    font-family: var(--Roboto);
     font-weight: 300;
 }
-.txt button{
+
+.txt button {
     font-family: var(--Roboto);
     font-weight: 300;
     padding-left: 8px;
 }
-.txt>h1::first-letter{
+
+.txt>h1::first-letter {
     font-size: 3.5rem;
 }
 
@@ -330,7 +333,7 @@ button:focus {
     top: 50%;
     transform: translate(0%, -50%);
     width: 200px;
-    height:490px;
+    height: 490px;
     margin-bottom: -20rem;
     box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 10%), 0px 0px 6px 1px rgb(0 0 0 / 20%);
     background: #2f323a;
@@ -452,20 +455,24 @@ button:focus {
 
 /*###################################--- content styling is written here -------###########################*/
 
-.content{
+.content {
     /* border-top: 1px solid #aaa; */
     /* background: #f9f9f9; */
     background: #f5f5f7;
 }
 
-.c-card{
-    background:#fff;
+.c-card {
+    background: #fff;
     width: 96%;
-    padding:20px;
+    padding: 20px;
     margin: 20px auto;
+    text-align: center;
+    font-weight: 700;
+    font-family: var(--montserrat);
 }
 
 /*###################################--- Avatar styling -------###########################*/
+
 .avatar-img img {
     width: 120px;
     height: 120px;
@@ -477,13 +484,14 @@ button:focus {
 .avatar-img {
     width: 100%;
     display: grid;
-    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     border-radius: 3px;
     padding: 12px 4px;
     column-gap: 10px;
 }
+
 /* .avatar-img {
     width: 100%;
     display: flex;
@@ -495,33 +503,34 @@ button:focus {
     border-radius: 3px;
     padding: 12px 4px;
 } */
-#avatar{
-    background: #fff;
-    padding:0 20px 30px 20px;
-}
 
+#avatar {
+    background: #fff;
+    padding: 0 20px 30px 20px;
+}
 
 /*###################################--- Alert styling -------###########################*/
 
-#alert div{
+#alerts div {
     width: 100%;
     margin: 7px 0px;
     text-align: center;
     border-radius: 3px;
 }
 
-.alert div{
+.alert div {
     padding: 10px 0;
     font-size: 1.8rem;
     font-family: var(--Roboto);
 }
-#alert span{
+
+#alert span {
     text-align: center;
 }
 
 /*###################################--- Badges styling -------###########################*/
 
-.badges div img{
+.badges div img {
     width: 70px;
     height: 70px;
     padding: 6px;
@@ -532,33 +541,36 @@ button:focus {
     object-position: center;
 }
 
-.badges h1{
+.badges h1 {
     font-weight: 600;
 }
 
-.badges h3{
+.badges h3 {
     text-align: left;
     margin: 3rem 0px 1rem 0px;
     font-weight: 500;
     padding-left: 10px;
 }
-.avatar-img-bg{
+
+.avatar-img-bg {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem 10rem;
 }
-.icon-img-bg{
+
+.icon-img-bg {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 2rem 5rem;
 }
 
-.img-av-bg{
+.img-av-bg {
     position: relative;
 }
-.img-av-bg button{
+
+.img-av-bg button {
     width: 20px;
     height: 20px;
     padding: 2px 2px 2px 4px;
@@ -567,7 +579,7 @@ button:focus {
     border: none;
 }
 
-.circle-bg{
+.circle-bg {
     width: 13px;
     height: 13px;
     border-radius: 50%;
@@ -575,7 +587,8 @@ button:focus {
     top: 50%;
     right: 1%;
 }
-.bg-circle{
+
+.bg-circle {
     width: 13px;
     height: 13px;
     border-radius: 50%;
@@ -587,7 +600,7 @@ button:focus {
 
 /*###################################--- Buttons styling -------###########################*/
 
-.btn button{
+.btn button {
     width: 17rem;
     display: inline-block;
     border: none;
@@ -598,7 +611,8 @@ button:focus {
     color: #fff;
     cursor: pointer;
 }
-button i{
+
+button i {
     margin: 0 0.5rem;
 }
 
@@ -639,7 +653,7 @@ button i{
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
 }
 
-.pro-card{
+.pro-card {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -647,52 +661,59 @@ button i{
     font-family: var(--Roboto);
 }
 
-.cart-opt-info h2{
+.cart-opt-info h2 {
     font-family: var(--Roboto);
-    font-size:1.5rem;
+    font-size: 1.5rem;
 }
-.cart-opt-info h3{
+
+.cart-opt-info h3 {
     font-size: 1.6rem;
     font-family: var(--Roboto);
 }
+
 /*###################################--- card styling -------###########################*/
 
-.cart-item{
+.cart-item {
     width: 71.1rem;
     height: 27rem;
     border: 1px solid #aaa;
     margin: 0 auto;
 }
-.cart-up{
+
+.cart-up {
     display: grid;
     grid-template-columns: 2fr 2fr 3fr;
     padding: 3px 5px;
     border-bottom: 1px solid #aaa;
 }
-.cart-up h3{
-    font-family: var(--Roboto);    
+
+.cart-up h3 {
+    font-family: var(--Roboto);
     padding-top: 8px;
     letter-spacing: 0px;
 }
 
-.cart-up div{
+.cart-up div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: space-around;
 }
-.cart-up div img{
+
+.cart-up div img {
     margin-top: -0.81rem;
     margin-left: 7.3rem;
 }
-.cart-up div p{
+
+.cart-up div p {
     font-size: 1.4rem;
     font-weight: 600;
     color: gray;
     font-family: var(--Roboto);
     letter-spacing: 1px;
 }
-.cart-up span h3{
+
+.cart-up span h3 {
     border: 1px solid #aaa;
     font-size: 1.4rem;
     padding: 10px;
@@ -702,44 +723,47 @@ button i{
     border-radius: 4px;
 }
 
-.img-crt img{
+.img-crt img {
     width: 150px;
     height: 150px;
     padding: 10px;
 }
 
-
 /* cart section middle section working */
 
-.cart-mid{
+.cart-mid {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
     margin-top: 1rem;
 }
-.crt-btn-crl{
+
+.crt-btn-crl {
     display: inline-block;
     width: 150px;
     text-align: center;
 }
-.crt-btn-crl span{
+
+.crt-btn-crl span {
     display: inline-block;
     box-sizing: border-box;
     width: 28px;
     height: 28px;
     margin: 0 1.8rem;
     font-size: 2rem;
-    color:gray;
+    color: gray;
     border: 1px solid #aaa;
     border-radius: 50%;
 }
-.crt-btn-crl{
+
+.crt-btn-crl {
     font-size: 2rem;
     font-weight: 500;
     font-family: var(--Roboto);
     position: relative;
     cursor: pointer;
-    }
-.crt-btn-crl::after{
+}
+
+.crt-btn-crl::after {
     content: "";
     width: 40px;
     display: inline-block;
@@ -748,23 +772,24 @@ button i{
     position: absolute;
     top: 0%;
     left: 50%;
-    transform: translate(-50%,-8%);
+    transform: translate(-50%, -8%);
     cursor: pointer;
 }
 
-.cart-txt h3{
+.cart-txt h3 {
     color: #000;
     font-size: 1.6rem;
     letter-spacing: 0px;
     font-family: var(--Roboto);
     font-weight: 400;
 }
-.cart-txt h3:hover{
+
+.cart-txt h3:hover {
     color: blue;
     cursor: pointer;
 }
 
-.cart-txt p{
+.cart-txt p {
     font-size: 1.3rem;
     font-weight: 500;
     color: #999;
@@ -772,7 +797,8 @@ button i{
     letter-spacing: 0px;
     margin: 1rem 0;
 }
-.cart-txt p img{
+
+.cart-txt p img {
     width: 70px;
     display: inline-block;
     position: absolute;
@@ -780,43 +806,48 @@ button i{
     margin-top: -0.3rem;
 }
 
-.cart-txt h2{
+.cart-txt h2 {
     font-family: var(--Roboto);
     letter-spacing: 0px;
     font-size: 1.6rem;
     margin-top: 2.8rem;
 }
-.cart-txt h2 span{
+
+.cart-txt h2 span {
     color: #999;
     font-size: 1.4rem;
     margin-left: 0.5rem;
 }
 
-.last-crt{
+.last-crt {
     margin-top: -15px;
 }
-.last-crt h2{
+
+.last-crt h2 {
     display: inline-block;
 }
 
-.last-crt h2:nth-child(2n){
-    margin-left:40px ;
+.last-crt h2:nth-child(2n) {
+    margin-left: 40px;
 }
-.last-crt h2:hover{
+
+.last-crt h2:hover {
     color: blue;
     cursor: pointer;
 }
 
-.cart-plc{
+.cart-plc {
     padding: 10px;
     margin-top: -2px;
 }
-.cart-plc h3{
+
+.cart-plc h3 {
     font-size: 1.4rem;
     letter-spacing: 0px;
     font-family: var(--Roboto);
 }
-.cart-plc p{
+
+.cart-plc p {
     color: #999;
     letter-spacing: 0;
     font-size: 1.4rem;
@@ -824,19 +855,63 @@ button i{
     margin-top: 2rem;
 }
 
-
 /* images  */
 
-.pics-of-img{
+.pics-of-img {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     margin-top: -10px;
 }
-.img-pics div img{
+
+.img-pics div img {
     width: 360px;
     height: auto;
     margin: 10px;
-    
 }
+
+/* #########################--input styling ----#################### */
+
+.input-cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.input{
+    border: 2px solid #f4f4f7;
+    padding: 10px;
+}
+
+.input input{
+    border: none;
+    outline: none;
+}
+
+.input form input {
+    text-align: center;
+    display: block;
+    border: none;
+    padding: 1rem 0.8rem;
+    margin: 1rem 0.3rem;
+    background:#f5f5f7;
+    border-radius: 0.3rem;
+}
+
+.btn-submit {
+    display: inline-block;
+    text-align: center;
+    width: 180px;
+}
+
+.input form button {
+    display: inline-block;
+    width: 13rem;
+    font-weight: 300;
+    border: none;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 0.3rem;
+}
+
+
